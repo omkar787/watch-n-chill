@@ -3,7 +3,7 @@ import Card from './Card'
 
 function Content({ movies }) {
     return (
-        <div className="p-5 overflow-auto flex gap-5 flex-wrap  justify-center md:gap-10">
+        <div className="p-1 overflow-auto flex gap-5 flex-wrap  justify-center md:gap-10">
             {
                 movies.length !== 0 ?
                     movies.map((m) => {
