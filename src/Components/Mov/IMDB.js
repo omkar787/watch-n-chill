@@ -3,7 +3,6 @@ import icon from "../../static/images/imdb_icon.png"
 
 
 export default function IMDB({ id }) {
-    console.log(id);
     return (
         <a href={`https://imdb.com/title/${id}`}>
 

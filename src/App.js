@@ -18,7 +18,7 @@ function App() {
 	axios.defaults.headers.get["Content-Type"] = "application/json;charset=utf-8";
 
 	return (
-		<div className={`App ${theme}`}>
+		<div className={`App scroll-smooth ${theme}`}>
 			<Routes>
 				<Route exact path="/" element={<Home />} />
 				<Route exact path="/movie/:id" element={<Movie />} />

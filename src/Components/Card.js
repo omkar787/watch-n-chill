@@ -2,18 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import genre from "../config/genres"
 import Tab from './Tab'
+import { lo } from 'react-router-dom'
 
 export default function Card({ movie }) {
 
-    const con = useLocation().pathname.includes("/movie")
     return (
-        <Link to={`/movie/${movie.id}`} onClick={() => {
-            if (con) {
-                setTimeout(() => {
-                    window.location.reload()
-                }, 100);
-            }
-        }} >
+
+        <Link to={`/movie/${movie.id}`}>
             <div style={{ backgroundImage: `url(${process.env.REACT_APP_IMAGE_URI}/original${movie.poster_path})` }}
                 className='cursor-pointer transition-all ease-in-out 
                             delay-150 md:hover:scale-95 bg-blue-200 flex flex-col 
@@ -41,6 +36,6 @@ export default function Card({ movie }) {
                     </div>
                 </div>
             </div>
-        </Link>
+        </Link >
     )
 }
